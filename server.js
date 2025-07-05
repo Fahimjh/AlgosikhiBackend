@@ -19,8 +19,10 @@ app.use("/api/progress", progressRoutes);
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {
-    // useNewUrlParser and useUnifiedTopology are deprecated
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 })
+
 .then(() => {
     console.log("✅ Connected to MongoDB");
     app.listen(5000, () => {
