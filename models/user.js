@@ -20,33 +20,35 @@ const UserSchema = new mongoose.Schema({
             "Array Introduction": {
                 arrayCreate: false
             },
-            "Array Sorting": {  // ✅ fixed here
+            "Array Sorting": {  
                 bubbleSort: false,
                 insertionSort: false,
                 selectionSort: false,
-                mergeSort: false     // ✅ add this too if you are tracking Merge Sort
+                mergeSort: false 
             },
             "Array Search": {
                 linearSearch: false,
                 binarySearch: false
             },
             "Array Update": {
-                updateInsert: false,
-                updateDelete: false,
-                updateModify: false
+                Insertion: false,
+                Deletion: false
             },
             "Vector Introduction": {
-                vectorIntro1: false,
-                vectorIntro2: false
+                vectorIntro: false
             },
             "Vector Basic Operations": {
                 pushBack: false,
                 popBack: false,
-                frontBack: false
+                clear: false,
+                size: false,
+                "vector[i]": false,
+                front: false,
+                back: false,
+                empty: false
             },
             "Vector Sort": {
-                vectorBubble: false,
-                vectorSTLSort: false
+                vecSort: false
             }
         }
     },
