@@ -49,6 +49,16 @@ const UserSchema = new mongoose.Schema({
             },
             "Vector Sort": {
                 vecSort: false
+            },
+            
+            "Vector Advanced Operations": { 
+                insert: false, 
+                erase: false, 
+                swap: false, 
+                begin_end: false, 
+                rbegin_rend: false, 
+                iterate: false, 
+                assign: false 
             }
         }
     },
