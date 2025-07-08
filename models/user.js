@@ -20,11 +20,11 @@ const UserSchema = new mongoose.Schema({
             "Array Introduction": {
                 arrayCreate: false
             },
-            "Array Sorting": {  
+            "Array Sorting": {
                 bubbleSort: false,
                 insertionSort: false,
                 selectionSort: false,
-                mergeSort: false 
+                mergeSort: false
             },
             "Array Search": {
                 linearSearch: false,
@@ -50,16 +50,22 @@ const UserSchema = new mongoose.Schema({
             "Vector Sort": {
                 vecSort: false
             },
-            
-            "Vector Advanced Operations": { 
-                insert: false, 
-                erase: false, 
-                swap: false, 
-                begin_end: false, 
-                rbegin_rend: false, 
-                iterate: false, 
-                assign: false 
-            }
+
+            "Vector Advanced Operations": {
+                insert: false,
+                erase: false,
+                swap: false,
+                begin_end: false,
+                rbegin_rend: false,
+                iterate: false,
+                assign: false
+            },
+            "Deque Operations": {
+                pushBack: false,
+                pushFront: false,
+                popBack: false,
+                popFront: false
+            },
         }
     },
     password: {
