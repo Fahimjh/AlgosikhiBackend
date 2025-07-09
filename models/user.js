@@ -66,6 +66,9 @@ const UserSchema = new mongoose.Schema({
                 popBack: false,
                 popFront: false
             },
+            "list Introduction": {
+                listIntro: false
+            }
         }
     },
     password: {
