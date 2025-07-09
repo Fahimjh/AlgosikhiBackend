@@ -68,6 +68,15 @@ const UserSchema = new mongoose.Schema({
             },
             "list Introduction": {
                 listIntro: false
+            },
+            "list Operations": {
+                pushBack: false,
+                pushFront: false,
+                popBack: false,
+                popFront: false,
+                insert: false,
+                remove: false,
+                merge: false
             }
         }
     },
