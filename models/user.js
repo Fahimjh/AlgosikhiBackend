@@ -77,7 +77,13 @@ const UserSchema = new mongoose.Schema({
                 insert: false,
                 remove: false,
                 merge: false
+            },
+            "Map Introduction": {
+                map: false,
+                multimap: false,
+                unordered_map: false
             }
+
         }
     },
     password: {
