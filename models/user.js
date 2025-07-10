@@ -79,9 +79,9 @@ const UserSchema = new mongoose.Schema({
                 merge: false
             },
             "Map Introduction": {
-                map: false,
-                multimap: false,
-                unordered_map: false
+                mapIntro: false,
+                multimapIntro: false,
+                unordered_mapIntro: false
             },
             "map Operations": {
                 insert: false,
