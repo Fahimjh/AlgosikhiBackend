@@ -82,6 +82,29 @@ const UserSchema = new mongoose.Schema({
                 map: false,
                 multimap: false,
                 unordered_map: false
+            },
+            "map Operations": {
+                insert: false,
+                emplace: false,
+                count: false,
+                find: false,
+                erase: false
+            },
+
+            "multimap Operations": {
+                insert: false,
+                emplace: false,
+                count: false,
+                find: false,
+                erase: false
+            },
+
+            "unordered_map Operations": {
+                insert: false,
+                emplace: false,
+                count: false,
+                find: false,
+                erase: false
             }
 
         }
