@@ -105,6 +105,11 @@ const UserSchema = new mongoose.Schema({
                 count: false,
                 find: false,
                 erase: false
+            },
+            "Set Introduction": {
+                setIntro: false,
+                multisetIntro: false,
+                unordered_setIntro: false
             }
 
         }
