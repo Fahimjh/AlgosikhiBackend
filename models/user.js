@@ -141,6 +141,15 @@ const UserSchema = new mongoose.Schema({
 
             "Stack Introduction": {
                 stackIntro: false
+            },
+
+            "Stack Operations": {
+                push: false,
+                pop: false,
+                top: false,
+                empty: false,
+                size: false,
+                swap: false
             }
 
         }
