@@ -137,6 +137,10 @@ const UserSchema = new mongoose.Schema({
                 count: false,
                 find: false,
                 erase: false,
+            },
+
+            "Stack Introduction": {
+                stackIntro: false
             }
 
         }
