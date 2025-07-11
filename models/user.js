@@ -110,6 +110,33 @@ const UserSchema = new mongoose.Schema({
                 setIntro: false,
                 multisetIntro: false,
                 unordered_setIntro: false
+            },
+            "set Operations": {
+                insert: false,
+                emplace: false,
+                count: false,
+                find: false,
+                erase: false,
+                lower_bound: false,
+                upper_bound: false
+            },
+
+            "multiset Operations": {
+                insert: false,
+                emplace: false,
+                count: false,
+                find: false,
+                erase: false,
+                lower_bound: false,
+                upper_bound: false
+            },
+
+            "unordered_set Operations": {
+                insert: false,
+                emplace: false,
+                count: false,
+                find: false,
+                erase: false,
             }
 
         }
