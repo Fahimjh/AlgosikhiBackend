@@ -155,6 +155,22 @@ const UserSchema = new mongoose.Schema({
             "Queue Introduction": {
                 queue: false,
                 priority_queue: false
+            },
+
+            "queue Operations": {
+                enqueue: false,
+                dequeue: false,
+                front: false,
+                rear: false,
+                empty: false,
+                size: false
+            },
+            "priority_queue Operations": {
+                push: false,
+                pop: false,
+                top: false,
+                empty: false,
+                size: false
             }
 
         }
