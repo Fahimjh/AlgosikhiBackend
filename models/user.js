@@ -117,26 +117,24 @@ const UserSchema = new mongoose.Schema({
                 count: false,
                 find: false,
                 erase: false,
-                lower_bound: false,
-                upper_bound: false
+                lowerBound: false,
+                upperBound: false
             },
-
             "multiset Operations": {
                 insert: false,
                 emplace: false,
                 count: false,
                 find: false,
                 erase: false,
-                lower_bound: false,
-                upper_bound: false
+                lowerBound: false,
+                upperBound: false
             },
-
             "unordered_set Operations": {
                 insert: false,
                 emplace: false,
                 count: false,
                 find: false,
-                erase: false,
+                erase: false
             },
 
             "Stack Introduction": {
@@ -151,7 +149,7 @@ const UserSchema = new mongoose.Schema({
                 size: false,
                 swap: false
             },
-            
+
             "Queue Introduction": {
                 queue: false,
                 priority_queue: false
@@ -165,7 +163,7 @@ const UserSchema = new mongoose.Schema({
                 empty: false,
                 size: false
             },
-            
+
             "priority_queue Operations": {
                 push: false,
                 pop: false,
