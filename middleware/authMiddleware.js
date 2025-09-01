@@ -7,11 +7,19 @@ function verifyToken(req, res, next) {
     }
     try {
         const decoded = jwt.verify(authHeader, process.env.JWT_SECRET);
-        req.user = { id: decoded.id }; // Make sure this matches your JWT payload
+        req.user = decoded; // Attach all payload (including isAdmin if present)
         next();
     } catch (err) {
         return res.status(401).json({ message: "Invalid token" });
     }
 }
 
-module.exports = verifyToken;
+function isAdmin(req, res, next) {
+    if (req.user && req.user.isAdmin) {
+        next();
+    } else {
+        res.status(403).json({ error: 'Admin access required' });
+    }
+}
+
+module.exports = { verifyToken, isAdmin };

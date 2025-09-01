@@ -6,7 +6,6 @@ const User = require("../models/user");
 const verifyToken = require("../middleware/authMiddleware");
 const router = express.Router();
 
-
 // REGISTER
 router.post("/register", async (req, res) => {
   try {
