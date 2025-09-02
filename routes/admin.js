@@ -53,7 +53,7 @@ router.post('/user/:userId/progress', verifyToken, isAdmin, async (req, res) => 
         if (!user.progress) user.progress = {};
         if (!user.progress[topic]) user.progress[topic] = {};
         user.progress[topic][sub] = isDone;
-
+        user.markModified('progress'); 
         await user.save();
         res.json({ message: 'Progress updated' });
     } catch (err) {
