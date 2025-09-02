@@ -6,7 +6,7 @@ const { verifyToken, isAdmin } = require('../middleware/authMiddleware');
 // Get all users and their progress
 router.get('/users', verifyToken, isAdmin, async (req, res) => {
     try {
-        const users = await User.find({}, 'username email progress');
+        const users = await User.find({}, 'username email progress isAdmin');
         res.json(users);
     } catch (err) {
         res.status(500).json({ error: 'Server error' });
