@@ -13,6 +13,22 @@ router.get('/users', verifyToken, isAdmin, async (req, res) => {
     }
 });
 
+// Update user info (username, email, password)
+router.put('/user/:userId', verifyToken, isAdmin, async (req, res) => {
+    const { username, email, password } = req.body;
+    try {
+        const update = { username, email };
+        if (password) {
+            const bcrypt = require('bcryptjs');
+            update.password = await bcrypt.hash(password, 10);
+        }
+        await User.findByIdAndUpdate(req.params.userId, update);
+        res.json({ message: 'User updated' });
+    } catch (err) {
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
 // Delete a user by ID
 router.delete('/user/:userId', verifyToken, isAdmin, async (req, res) => {
     try {
