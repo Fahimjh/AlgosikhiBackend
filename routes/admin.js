@@ -32,6 +32,10 @@ router.put('/user/:userId', verifyToken, isAdmin, async (req, res) => {
 // Delete a user by ID
 router.delete('/user/:userId', verifyToken, isAdmin, async (req, res) => {
     try {
+        const user = await User.findById(req.params.userId);
+        if (user.isAdmin) {
+            return res.status(403).json({ error: 'Admin account cannot be deleted.' });
+        }
         await User.findByIdAndDelete(req.params.userId);
         res.json({ message: 'User deleted' });
     } catch (err) {
